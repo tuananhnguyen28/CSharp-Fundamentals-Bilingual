@@ -170,15 +170,14 @@ namespace MiniProject
 
             // Phương thức kiểm tra tệp "staff.txt" có tồn tại hay không?
             Console.WriteLine("Kiểm tra file staff.txt có tồn tại hay không?");
-            Console.Write("Nhập tên tập để kiểm tra sự tồn tại: ");
-            string? path = Console.ReadLine();
-            string defaultPath = @"D:\PROGRAMMING\.NET\Projects\2-C#Fundamentals\";
-            string destinationPath = @"D:\PROGRAMMING\.NET\Projects\2-C#Fundamentals\FinalStaff.txt";
-            string joinedPath = defaultPath + path;    // Nối đường dẫn mặc định cùng với tên file được nhập từ người dùng
+            string existingFile = "staff.txt";
+            string creatingFile = "FinalStaff.txt";
+            string existingPath = Path.GetFullPath(existingFile); // Lấy đường dẫn tương đối (cùng cấp với thư mục - root directory) cùng với tên tệp cho trước
+            string destinationPath = Path.GetFullPath(creatingFile);
             
-            if(File.Exists(joinedPath))
+            if(File.Exists(existingPath))
             {
-                using(StreamReader sr = new StreamReader(CheckingThePathIsNull(joinedPath)))
+                using(StreamReader sr = new StreamReader(CheckingThePathIsNull(existingPath)))
                 {
                     while(sr.EndOfStream != true)
                     {
@@ -235,11 +234,12 @@ namespace MiniProject
         }
         public void GeneratePaySlip(List<Staff> myStaff)
         {
-            string originPath;
+            string generatedPath;
             foreach(Staff f in myStaff)
             {
-                originPath = @"D:\PROGRAMMING\.NET\Projects\2-C#Fundamentals\" + f.NameOfStaff + ".txt";
-                using(StreamWriter sw = new StreamWriter(CheckingThePathIsNull(originPath), true))
+                string employeeOfPaySlipName = f.NameOfStaff + ".txt";
+                generatedPath = Path.GetFullPath(employeeOfPaySlipName);
+                using(StreamWriter sw = new StreamWriter(CheckingThePathIsNull(generatedPath), true))
                 {
                     sw.WriteLine("PAYSLIP FOR DEC 2010");
                     sw.WriteLine("==========================");

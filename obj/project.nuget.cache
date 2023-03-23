@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "BFE/ZUN6WgMARaHVr5R/pIrVZW1CmqmQt4mIgONMlpw11P8awjrWrm2R9mwKPDYXGrQOD+C90AQZn9vBLFLTuQ==",
+  "dgSpecHash": "YqF+h4V/Y79TdUjfbhSqXi7df6XgXh0Bogd7gkA2EZXxj6NB8HxAyhx+hh8F/xxkbDrEwCM+MFXdoD/whsO+oQ==",
   "success": true,
-  "projectFilePath": "D:\\PROGRAMMING\\.NET\\Projects\\2-C#Fundamentals\\C#Fundamentals.csproj",
+  "projectFilePath": "D:\\PROGRAMMING\\C#\\Projects\\CSharp-Fundamentals-Bilingual\\C#Fundamentals.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.netcore.app.ref\\6.0.12\\microsoft.netcore.app.ref.6.0.12.nupkg.sha512",
     "C:\\Users\\ADMIN\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\6.0.12\\microsoft.windowsdesktop.app.ref.6.0.12.nupkg.sha512",

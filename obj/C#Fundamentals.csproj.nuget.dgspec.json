@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\PROGRAMMING\\.NET\\Projects\\2-C#Fundamentals\\C#Fundamentals.csproj": {}
+    "D:\\PROGRAMMING\\C#\\Projects\\CSharp-Fundamentals-Bilingual\\C#Fundamentals.csproj": {}
   },
   "projects": {
-    "D:\\PROGRAMMING\\.NET\\Projects\\2-C#Fundamentals\\C#Fundamentals.csproj": {
+    "D:\\PROGRAMMING\\C#\\Projects\\CSharp-Fundamentals-Bilingual\\C#Fundamentals.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\PROGRAMMING\\.NET\\Projects\\2-C#Fundamentals\\C#Fundamentals.csproj",
+        "projectUniqueName": "D:\\PROGRAMMING\\C#\\Projects\\CSharp-Fundamentals-Bilingual\\C#Fundamentals.csproj",
         "projectName": "C#Fundamentals",
-        "projectPath": "D:\\PROGRAMMING\\.NET\\Projects\\2-C#Fundamentals\\C#Fundamentals.csproj",
+        "projectPath": "D:\\PROGRAMMING\\C#\\Projects\\CSharp-Fundamentals-Bilingual\\C#Fundamentals.csproj",
         "packagesPath": "C:\\Users\\ADMIN\\.nuget\\packages\\",
-        "outputPath": "D:\\PROGRAMMING\\.NET\\Projects\\2-C#Fundamentals\\obj\\",
+        "outputPath": "D:\\PROGRAMMING\\C#\\Projects\\CSharp-Fundamentals-Bilingual\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\ADMIN\\AppData\\Roaming\\NuGet\\NuGet.Config",
