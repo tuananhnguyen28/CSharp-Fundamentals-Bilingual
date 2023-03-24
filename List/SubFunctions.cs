@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using static CustomExtensions.IntegerExtensions;
+using static CustomExtensions.StringExtensions;
 using System.IO;
 
 namespace SubFuntions
@@ -417,12 +418,6 @@ namespace SubFuntions
     public class SubLessonsOfLesson1Chapter11 
     {
         // Tạo một thể hiện mới của lớp ArgumentException để thông báo lỗi khi chuỗi truyền vào bị rỗng
-        public static string CheckingThePathIsNull(string? text) {
-            if(text is null) {
-                throw new ArgumentException(nameof(text));
-            }
-            return text;
-        }
         public static void Lesson11_1_1_ReadTextFile_TryCatch()
         {
             Console.WriteLine(">>>>> Đọc dữ liệu từ file: Try...Catch <<<<<");

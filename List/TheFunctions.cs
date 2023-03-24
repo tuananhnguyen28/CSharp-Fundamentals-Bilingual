@@ -2,6 +2,7 @@ using System;
 using Choice;
 using static TableOfContent.Table_Of_Content_Of_SubLessons;
 using System.IO;
+using static CustomExtensions.StringExtensions;
 using static SubFuntions.SubLessonsOfLesson1Chapter11;
 
 namespace TheFunctions

@@ -1,7 +1,7 @@
 using System;
 using System.IO;
 using static Prompt.ChaptersReturningSelection;
-using static SubFuntions.SubLessonsOfLesson1Chapter11;
+using static CustomExtensions.StringExtensions;
 
 namespace MiniProject
 {
