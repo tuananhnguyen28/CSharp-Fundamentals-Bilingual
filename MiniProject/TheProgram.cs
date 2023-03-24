@@ -168,12 +168,10 @@ namespace MiniProject
             string[]? result = new string[2];
             string[] seperator = { "," };
 
-            // Phương thức kiểm tra tệp "staff.txt" có tồn tại hay không?
-            Console.WriteLine("Kiểm tra file staff.txt có tồn tại hay không?");
-            string existingFile = "staff.txt";
-            string creatingFile = "FinalStaff.txt";
-            string existingPath = Path.GetFullPath(existingFile); // Lấy đường dẫn tương đối (cùng cấp với thư mục - root directory) cùng với tên tệp cho trước
-            string destinationPath = Path.GetFullPath(creatingFile);
+            // Lấy đường dẫn tương đối (cùng cấp với thư mục - root directory) cùng với tên tệp cho trước
+            Console.WriteLine(">>>>> Kiểm tra file người dùng nhập có tồn tại trong thư mục hay không? <<<<<");
+            Console.Write("Nhập file muốn kiểm tra: ");
+            string existingPath = Path.GetFullPath(CheckingThePathIsNull(Console.ReadLine()));
             
             if(File.Exists(existingPath))
             {
@@ -195,17 +193,28 @@ namespace MiniProject
                             }
                         }
                     }
+
+                    // Khai báo file muốn tạo tự động trong thư mục
+                    Console.Write("Nhập file muốn tạo mới trong thư mục: ");
+                    string destinationPath = Path.GetFullPath(CheckingThePathIsNull(Console.ReadLine()));
+
+                    // Chỉ lấy tên file trong thư mục, không bao gồm đường dẫn (vị trí dấu \\ cuối cùng của đường dẫn tính từ bên phải qua)
+                    int indexDestinationFile = destinationPath.LastIndexOf('\\');
+
+                    // Chứa chuỗi con từ vị trí dấu \\ đến cuối chuỗi
+                    string fileNameOfDestinationPath = destinationPath.Substring(indexDestinationFile + 1);
+
                     // Dùng câu lệnh LinQ - Select để parse List<Staff>() to List<string>
                     List<string> myStaffOfStringType = myStaff.Select(staff => staff.ToString()).ToList();
 
                     // Check điều kiện, nếu không có dữ liệu được thêm vào thì thông báo cho người dùng.
                     if(myStaffOfStringType.Count == 0) {
-                        Console.WriteLine("Danh sách rỗng, file FinalStaff.txt không được ghi!");
+                        Console.WriteLine("Danh sách rỗng, file {0} không được ghi!", fileNameOfDestinationPath);
                     }
                     else
                     {
                         File.WriteAllLines(destinationPath, myStaffOfStringType);
-                        Console.WriteLine("FinalStaff.txt được ghi thành công!!!");
+                        Console.WriteLine("File {0} được ghi thành công!!!", fileNameOfDestinationPath);
                     }
                     sr.Close();
                 }
